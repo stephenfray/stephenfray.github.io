@@ -1,0 +1,270 @@
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+/// Header
+///////////////////////////////////////
+header {
+    .logo, ul a {
+        opacity: 0;
+        filter: blur(2px);
+        transition: opacity 1s, filter .5s; 
+    }
+    &.in-view 
+    {
+        ul li:nth-of-type(1) a {
+            transition-delay:100ms
+        }
+        ul li:nth-of-type(2) a {
+            transition-delay:200ms
+        }
+        ul li:nth-of-type(3) a {
+            transition-delay:300ms
+        }
+        ul li:nth-of-type(4) a:nth-of-type(1) {
+            transition-delay:400ms
+        }
+        ul li:nth-of-type(4) a:nth-of-type(2) {
+            transition-delay:500ms
+        }
+        .logo, ul a  {
+            opacity: 1;
+            filter: blur(0);
+        }
+        
+    }
+}
+
+
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+/// Hero - Image Grid
+///////////////////////////////////////
+.picture-gallery {
+    > div {
+        opacity: 0;
+        filter: blur(2px);
+        transform: scale(0.9);
+        transition: all .5s ease-in-out; 
+    }
+    &.in-view > div {
+        &:nth-of-type(1) {
+            transition-delay:100ms
+        }
+        &:nth-of-type(2) {
+            transition-delay:200ms
+        }
+        &:nth-of-type(3) {
+            transition-delay:300ms
+        }
+        &:nth-of-type(4) {
+            transition-delay:400ms
+        }
+        &:nth-of-type(5) {
+            transition-delay:500ms
+        }
+        &:nth-of-type(6) {
+            transition-delay:600ms
+        }
+        &:nth-of-type(7) {
+            transition-delay:700ms
+        }
+        &:nth-of-type(8) {
+            transition-delay:800ms
+        }
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+    }
+}
+
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+/// Hero - Intro
+///////////////////////////////////////
+.opening-statement {
+    h1 {
+        transform: translateY(.5em);
+    }
+    p {
+        transform: translateY(4em);
+    }
+    a:nth-of-type(1) {
+        transform: translateY(2.5em);
+    }
+    a:nth-of-type(2) {
+        transform: translateY(3.5em);
+    }
+    h1, p, a {
+        opacity: 0;
+        transition: all .5s ease-in-out; 
+    }
+    &.in-view {
+        p {
+            transition-delay:100ms
+        }
+        a:nth-of-type(1) {
+            transition-delay:200ms
+        }
+        a:nth-of-type(2) {
+            transition-delay:300ms
+        }
+        h1, p, a {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+/// H2 - Section headings
+///////////////////////////////////////
+h2 {
+    opacity: 0;
+    transform: translateY(.5em);
+    transition: all .5s ease-in-out; 
+    &.in-view {
+        // opacity: 1; - already set elsewhere
+        transform: translateY(0);
+    }
+}
+
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+/// Skills Section
+////////////////////////////////////
+.core-skills, .basic-skills {
+    h3, li {
+        opacity: 0;
+        transform: translateX(-5em); 
+        transition: all .5s ease-in-out; 
+        
+    }
+    &.in-view {
+        li {
+            &:nth-of-type(1) {
+                transition-delay:100ms
+            }
+            &:nth-of-type(2) {
+                transition-delay:200ms
+            }
+            &:nth-of-type(3) {
+                transition-delay:300ms
+            }
+            &:nth-of-type(4) {
+                transition-delay:400ms
+            }
+            &:nth-of-type(5) {
+                transition-delay:500ms
+            }
+            &:nth-of-type(6) {
+                transition-delay:600ms
+            }
+            &:nth-of-type(7) {
+                transition-delay:700ms
+            }
+            &:nth-of-type(8) {
+                transition-delay:800ms
+            } 
+            &:nth-of-type(9) {
+                transition-delay:800ms
+            } 
+            &:nth-of-type(10) {
+                transition-delay:800ms
+            } 
+            &:nth-of-type(11) {
+                transition-delay:800ms
+            } 
+        }
+        h3, li {
+            opacity: 1; 
+            transform: translateX(0);
+        }
+    }
+}
+
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+/// Work Items
+///////////////////////////////////////
+#work article {
+    .work-details, .image-container {
+        opacity: 0;
+        transition: all .5s ease-in-out; 
+    }
+    .work-details {
+        transform: translateX(-10em); 
+    }
+    .image-container {
+        transform: translateX(+5em); 
+    }
+    h3 {
+        opacity: 0;
+        transform: translateY(1em); 
+        transition: all .5s ease-in-out; 
+    }
+    p, .skills-used, .buttons {
+        opacity: 0;
+        transform: translateY(1em); 
+        transition: all .5s ease-in-out; 
+    }
+
+    &.in-view {
+        h3 {
+            transition-delay:300ms;
+        }
+        p {
+            transition-delay:400ms;
+        }
+        .skills-used {
+            transition-delay:500ms;
+        }
+        .buttons {
+            transition-delay:600ms;
+        }
+        h3, p, .skills-used, .buttons {
+            opacity: 1;
+            transform: translateY(0); 
+        }
+        .work-details, .image-container {
+            opacity: 1; 
+            transform: translateX(0);
+        }
+
+    }
+}
+
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
+/// Contact
+///////////////////////////////////////
+#contact .watch {
+    opacity: 0;
+    transform: translateY(1em); 
+    transition: all .5s ease-in-out; 
+    &.in-view  {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}

@@ -1,0 +1,539 @@
+body {
+  visibility: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 8em 0 0 0;
+  margin: 0;
+}
+
+@media all and (min-width: 651px) {
+  body {
+    padding: 5em 0 0 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.coloured-background {
+  background-color: #e8fdfb;
+}
+
+body {
+  color: #666666;
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #333333;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6vw, 4.6rem);
+  margin: 0 0 0.5em 0;
+  line-height: 1;
+}
+
+h2 {
+  font-size: clamp(1rem, 7vw, 1.5rem);
+  margin: 0 0 0.5em 0;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+ul {
+  font-size: 1rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+  transition: all 300ms ease-in-out;
+  color: #333333;
+  padding: 1.5em 1em;
+}
+
+.scroll-down header {
+  transform: translate3d(0, -100%, 0);
+}
+
+.button {
+  border-radius: 3px;
+  padding: 0.5em 1.7em;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+.button.--solid {
+  border: 2px solid #15c6b5;
+  background-color: #15c6b5;
+  color: #fff;
+}
+
+.button.--hollow {
+  border: 2px solid #15c6b5;
+  color: #15c6b5;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.button:hover {
+  border: 2px solid #12ab9b;
+  background-color: #12ab9b;
+  color: #fff;
+}
+
+.empty-button {
+  color: #15c6b5;
+  padding: 0.5em 1.7em;
+  cursor: pointer;
+}
+
+nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  line-height: 1;
+}
+
+@media all and (max-width: 650px) {
+  nav {
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 1250px) {
+  nav {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+}
+
+nav .logo {
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-right: auto;
+}
+
+nav .logo span {
+  color: #15c6b5;
+  transition: all 300ms ease-in-out;
+}
+
+nav .logo a:hover {
+  color: #15c6b5;
+}
+
+nav .logo a:hover span {
+  color: #333333;
+}
+
+@media all and (max-width: 650px) {
+  nav .logo {
+    margin-bottom: 0.5em;
+  }
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+  display: flex;
+}
+
+@media all and (max-width: 650px) {
+  nav ul {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li:last-of-type a:last-of-type {
+  margin-left: 1.1em;
+}
+
+@media all and (min-width: 651px) {
+  nav ul li:not(:first-of-type) {
+    margin-left: 2.5em;
+  }
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 150ms ease-in-out;
+  display: flex;
+}
+
+nav a:hover {
+  color: #12ab9b;
+}
+
+nav img {
+  width: 30px;
+}
+
+section {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+@media all and (min-width: 450px) and (max-width: 1250px) {
+  section {
+    padding-right: 2em;
+    padding-left: 2em;
+  }
+}
+
+@media all and (max-width: 449px) {
+  section {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+}
+
+section.hero {
+  min-height: 85vh;
+  max-height: 1000px;
+}
+
+section.hero .buttons {
+  display: flex;
+}
+
+section.hero .buttons .button:last-of-type {
+  margin-left: 1em;
+}
+
+@media all and (min-width: 901px) {
+  section.hero .opening-statement {
+    width: 60%;
+    padding-right: 2em;
+  }
+  section.hero .opening-statement .buttons {
+    margin-top: 4em;
+  }
+  section.hero .opening-statement .button {
+    padding: 1em 2.5em;
+  }
+  section.hero .picture-gallery {
+    width: 40%;
+  }
+}
+
+@media all and (max-width: 900px) {
+  section.hero {
+    flex-direction: column;
+    position: relative;
+  }
+  section.hero .opening-statement {
+    order: 1;
+    z-index: 1;
+    margin: auto;
+  }
+  section.hero .opening-statement .buttons {
+    margin-top: 2em;
+  }
+  section.hero .opening-statement .button {
+    padding: 0.7em 1.3em;
+  }
+  section.hero .picture-gallery {
+    order: 0;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+}
+
+section.hero .picture-gallery {
+  display: grid;
+  grid-auto-rows: 4%;
+  grid-auto-columns: 5%;
+}
+
+section.hero .picture-gallery .grid-box-1 {
+  grid-column: 15 / 20;
+  grid-row: 1 / 7;
+  z-index: 99;
+}
+
+section.hero .picture-gallery .grid-box-2 {
+  grid-column: 13 / 18;
+  grid-row: 16 / 23;
+  z-index: 99;
+}
+
+section.hero .picture-gallery .grid-box-3 {
+  grid-column: 6 / 10;
+  grid-row: 2 / 6;
+  z-index: 99;
+}
+
+section.hero .picture-gallery .grid-box-4 {
+  grid-column: 2 / 9;
+  grid-row: 18 / 25;
+  z-index: 99;
+}
+
+section.hero .picture-gallery .grid-box-5 {
+  grid-column: 2 / 5;
+  grid-row: 13 / 16;
+  z-index: 99;
+}
+
+section.hero .picture-gallery .grid-box-6 {
+  grid-column: 1 / 6;
+  grid-row: 5 / 11;
+  z-index: 99;
+}
+
+section.hero .picture-gallery .grid-box-7 {
+  grid-column: 16 / 20;
+  grid-row: 9 / 16;
+  z-index: 99;
+}
+
+section.hero .picture-gallery .grid-box-8 {
+  grid-column: 4 / 18;
+  grid-row: 4 / 20;
+}
+
+section.skills {
+  min-height: 90vh;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+section.skills .skills-lists {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+@media all and (max-width: 850px) {
+  section.skills .skills-lists {
+    flex-direction: column;
+  }
+}
+
+section.skills .skills-lists h2 {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+section.skills .core-skills,
+section.skills .basic-skills {
+  display: flex;
+  width: 50%;
+  padding-right: 2em;
+}
+
+@media all and (max-width: 850px) {
+  section.skills .core-skills,
+  section.skills .basic-skills {
+    padding: 0 2em 2em 0;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 450px) {
+  section.skills .core-skills,
+  section.skills .basic-skills {
+    flex-direction: column;
+  }
+}
+
+section.skills ul {
+  margin: 0 0 0 15%;
+  list-style: none;
+}
+
+section.skills ul li {
+  margin: 1em 0;
+  position: relative;
+}
+
+section.skills ul li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #15c6b5;
+  position: absolute;
+  left: -1.5em;
+  top: calc(50% - 2px);
+}
+
+section.work {
+  display: flex;
+  width: 100%;
+  padding-bottom: 7em;
+}
+
+section.work h2 {
+  margin-top: 3em;
+}
+
+section.work article {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-top: 5em;
+}
+
+section.work article .image-container {
+  width: 25%;
+  min-width: 180px;
+  position: absolute;
+  top: 1em;
+  left: 0;
+  bottom: 0;
+}
+
+@media all and (min-width: 1200px) {
+  section.work article .image-container {
+    width: 42%;
+    min-width: 100px;
+  }
+}
+
+@media all and (min-width: 850px) {
+  section.work article .image-container {
+    top: 5em;
+    bottom: 0;
+  }
+}
+
+section.work article .work-details {
+  background-color: #fff;
+  padding: 5em 5em 5em clamp(2em, 20vw, 15em);
+  width: 90%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  min-height: 605px;
+}
+
+@media all and (min-width: 1200px) {
+  section.work article .work-details {
+    width: 75%;
+    margin-left: 25%;
+  }
+}
+
+@media all and (max-width: 850px) {
+  section.work article .work-details {
+    width: 100%;
+    margin-left: 0;
+    padding: 10em 3em 3em 3em;
+    margin-top: 3em;
+  }
+}
+
+@media all and (max-width: 450px) {
+  section.work article .work-details {
+    padding: 10em 2em 2em 2em;
+  }
+}
+
+section.work article .work-details h4 {
+  margin: 0 0 0 0;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+section.work article .work-details p {
+  margin: 1em 0 0 0;
+}
+
+section.work article .work-details .skills-used {
+  color: #15c6b5;
+  display: flex;
+  padding: 1em 0;
+  margin: auto 0;
+  flex-wrap: wrap;
+}
+
+section.work article .work-details .skills-used ul {
+  list-style: none;
+  padding: 1em 3em 1em 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media all and (max-width: 1200px) {
+  section.work article .work-details .skills-used ul {
+    font-size: 0.8rem;
+  }
+}
+
+section.work article .work-details .buttons {
+  display: flex;
+  width: 100%;
+  margin-top: auto;
+}
+
+section.contact {
+  min-height: 100vh;
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+section.contact > div {
+  max-width: 500px;
+}
+
+section.contact p {
+  margin: 2em 0;
+}
+
+section.contact .links a {
+  margin-right: 0.6em;
+}
+
+section.contact img {
+  width: 45px;
+}
