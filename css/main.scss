@@ -613,32 +613,49 @@ section.skills {
 	.core-skills,
 	.basic-skills {
 		display: flex;
+		flex-direction: column;
 		width: 50%;
 		padding-right: 2em;
 		@media all and (max-width: 850px) {
 			padding: 0 2em 2em 0;
 			width: 100%;
 		}
-		@media all and (max-width: 450px) {
-			flex-direction: column;
-		}
+	}
+	h3 {
+		color: var(--green);
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		font-size: 0.85rem;
+		margin: 0 0 1em 0;
 	}
 	ul {
-		margin: 0 0 0 15%;
+		margin: 0;
+		padding: 0;
 		list-style: none;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+		gap: 0.8em;
 		li {
-			margin: 1em 0;
-			position: relative;
-			&::before {
-				content: "";
-				width: 4px;
-				height: 4px;
-				border-radius: 50%;
-				background-color: var(--green);
-				position: absolute;
-				left: -1.5em;
-				top: calc(50% - 2px);
-			}
+			margin: 0;
+			display: flex;
+		}
+		p {
+			margin: 0;
+			padding: 1.1em 0.8em;
+			width: 100%;
+			background-color: #fff;
+			color: var(--font-dark);
+			border-radius: 8px;
+			box-shadow: 0 0 6px 6px rgba(232, 253, 251, 0.5);
+			font-size: 1.05rem;
+			font-weight: 700;
+			text-align: center;
+			transition: all 150ms ease-in-out;
+		}
+		li:hover p {
+			background-color: var(--green);
+			color: #fff;
+			transform: translateY(-3px);
 		}
 	}
 }

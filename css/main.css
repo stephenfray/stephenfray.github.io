@@ -1,7 +1,7 @@
 :root {
   --max-width: 1200px;
   --font-body: "Inter", sans-serif;
-  --font-heading: "Bricolage Grotesque", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
   --font-dark: hsl(0, 0%, 20%);
   --font-mid: hsl(0, 0%, 40%);
   --green: hsl(174, 81%, 43%);
@@ -14,8 +14,8 @@
 
 header .logo, header ul a {
   opacity: 0;
-  filter: blur(2px);
-  transition: opacity 1s, filter 0.5s;
+  transform: translateY(0.5em);
+  transition: all 0.5s ease-in-out;
 }
 header.in-view ul li:nth-of-type(1) a {
   transition-delay: 100ms;
@@ -34,7 +34,7 @@ header.in-view ul li:nth-of-type(4) a:nth-of-type(2) {
 }
 header.in-view .logo, header.in-view ul a {
   opacity: 1;
-  filter: blur(0);
+  transform: translateY(0);
 }
 
 .picture-gallery > div {
@@ -44,28 +44,28 @@ header.in-view .logo, header.in-view ul a {
   transition: all 0.5s ease-in-out;
 }
 .picture-gallery.in-view > div:nth-of-type(1) {
-  transition-delay: 100ms;
+  transition-delay: 0ms;
 }
 .picture-gallery.in-view > div:nth-of-type(2) {
-  transition-delay: 200ms;
+  transition-delay: 50ms;
 }
 .picture-gallery.in-view > div:nth-of-type(3) {
-  transition-delay: 300ms;
+  transition-delay: 100ms;
 }
 .picture-gallery.in-view > div:nth-of-type(4) {
-  transition-delay: 400ms;
+  transition-delay: 150ms;
 }
 .picture-gallery.in-view > div:nth-of-type(5) {
-  transition-delay: 500ms;
+  transition-delay: 200ms;
 }
 .picture-gallery.in-view > div:nth-of-type(6) {
-  transition-delay: 600ms;
+  transition-delay: 250ms;
 }
 .picture-gallery.in-view > div:nth-of-type(7) {
-  transition-delay: 700ms;
+  transition-delay: 300ms;
 }
 .picture-gallery.in-view > div:nth-of-type(8) {
-  transition-delay: 800ms;
+  transition-delay: 350ms;
 }
 .picture-gallery.in-view > div {
   opacity: 1;
@@ -73,21 +73,13 @@ header.in-view .logo, header.in-view ul a {
   transform: scale(1);
 }
 
-.opening-statement h1 {
-  transform: translateY(0.5em);
-}
-.opening-statement p {
-  transform: translateY(4em);
-}
-.opening-statement a:nth-of-type(1) {
-  transform: translateY(2.5em);
-}
-.opening-statement a:nth-of-type(2) {
-  transform: translateY(3.5em);
-}
 .opening-statement h1, .opening-statement p, .opening-statement a {
   opacity: 0;
+  transform: translateY(1em);
   transition: all 0.5s ease-in-out;
+}
+.opening-statement h1 {
+  transform: translateY(0.3em);
 }
 .opening-statement.in-view p {
   transition-delay: 100ms;
@@ -112,86 +104,138 @@ h2.in-view {
   transform: translateY(0);
 }
 
-.certifications-grid .certification-card {
+.certifications-list .certification-card {
   opacity: 0;
   transform: translateY(1.5em);
   transition: all 0.5s ease-in-out;
 }
-.certifications-grid.in-view .certification-card:nth-of-type(1) {
+.certifications-list.in-view h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.certifications-list.in-view .certification-card:nth-of-type(1) {
   transition-delay: 150ms;
 }
-.certifications-grid.in-view .certification-card:nth-of-type(2) {
+.certifications-list.in-view .certification-card:nth-of-type(2) {
   transition-delay: 300ms;
 }
-.certifications-grid.in-view .certification-card:nth-of-type(3) {
+.certifications-list.in-view .certification-card:nth-of-type(3) {
   transition-delay: 450ms;
 }
-.certifications-grid.in-view .certification-card:nth-of-type(4) {
+.certifications-list.in-view .certification-card:nth-of-type(4) {
   transition-delay: 600ms;
 }
-.certifications-grid.in-view .certification-card:nth-of-type(5) {
+.certifications-list.in-view .certification-card:nth-of-type(5) {
   transition-delay: 750ms;
 }
-.certifications-grid.in-view .certification-card:nth-of-type(6) {
+.certifications-list.in-view .certification-card:nth-of-type(6) {
   transition-delay: 900ms;
 }
-.certifications-grid.in-view .certification-card {
+.certifications-list.in-view .certification-card {
   opacity: 1;
   transform: translateY(0);
 }
 
-.core-skills h3, .core-skills li, .basic-skills h3, .basic-skills li {
+.skills-lists .core-skills h3, .skills-lists .basic-skills h3 {
   opacity: 0;
-  transform: translateX(-5em);
+  transform: translateY(1em);
   transition: all 0.5s ease-in-out;
 }
-.core-skills.in-view li:nth-of-type(1), .basic-skills.in-view li:nth-of-type(1) {
-  transition-delay: 100ms;
+.skills-lists .core-skills li, .skills-lists .basic-skills li {
+  opacity: 0;
+  transform: translateY(1em);
+  transition: all 0.5s ease-in-out;
 }
-.core-skills.in-view li:nth-of-type(2), .basic-skills.in-view li:nth-of-type(2) {
-  transition-delay: 200ms;
-}
-.core-skills.in-view li:nth-of-type(3), .basic-skills.in-view li:nth-of-type(3) {
-  transition-delay: 300ms;
-}
-.core-skills.in-view li:nth-of-type(4), .basic-skills.in-view li:nth-of-type(4) {
-  transition-delay: 400ms;
-}
-.core-skills.in-view li:nth-of-type(5), .basic-skills.in-view li:nth-of-type(5) {
-  transition-delay: 500ms;
-}
-.core-skills.in-view li:nth-of-type(6), .basic-skills.in-view li:nth-of-type(6) {
-  transition-delay: 600ms;
-}
-.core-skills.in-view li:nth-of-type(7), .basic-skills.in-view li:nth-of-type(7) {
-  transition-delay: 700ms;
-}
-.core-skills.in-view li:nth-of-type(8), .basic-skills.in-view li:nth-of-type(8) {
-  transition-delay: 800ms;
-}
-.core-skills.in-view li:nth-of-type(9), .basic-skills.in-view li:nth-of-type(9) {
-  transition-delay: 800ms;
-}
-.core-skills.in-view li:nth-of-type(10), .basic-skills.in-view li:nth-of-type(10) {
-  transition-delay: 800ms;
-}
-.core-skills.in-view li:nth-of-type(11), .basic-skills.in-view li:nth-of-type(11) {
-  transition-delay: 800ms;
-}
-.core-skills.in-view h3, .core-skills.in-view li, .basic-skills.in-view h3, .basic-skills.in-view li {
+.skills-lists.in-view h2 {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
+}
+.skills-lists.in-view .core-skills h3, .skills-lists.in-view .basic-skills h3 {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 150ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(1), .skills-lists.in-view .basic-skills li:nth-of-type(1) {
+  transition-delay: 250ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(2), .skills-lists.in-view .basic-skills li:nth-of-type(2) {
+  transition-delay: 310ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(3), .skills-lists.in-view .basic-skills li:nth-of-type(3) {
+  transition-delay: 370ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(4), .skills-lists.in-view .basic-skills li:nth-of-type(4) {
+  transition-delay: 430ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(5), .skills-lists.in-view .basic-skills li:nth-of-type(5) {
+  transition-delay: 490ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(6), .skills-lists.in-view .basic-skills li:nth-of-type(6) {
+  transition-delay: 550ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(7), .skills-lists.in-view .basic-skills li:nth-of-type(7) {
+  transition-delay: 610ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(8), .skills-lists.in-view .basic-skills li:nth-of-type(8) {
+  transition-delay: 670ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(9), .skills-lists.in-view .basic-skills li:nth-of-type(9) {
+  transition-delay: 730ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(10), .skills-lists.in-view .basic-skills li:nth-of-type(10) {
+  transition-delay: 790ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(11), .skills-lists.in-view .basic-skills li:nth-of-type(11) {
+  transition-delay: 850ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(12), .skills-lists.in-view .basic-skills li:nth-of-type(12) {
+  transition-delay: 910ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(13), .skills-lists.in-view .basic-skills li:nth-of-type(13) {
+  transition-delay: 970ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(14), .skills-lists.in-view .basic-skills li:nth-of-type(14) {
+  transition-delay: 1030ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(15), .skills-lists.in-view .basic-skills li:nth-of-type(15) {
+  transition-delay: 1090ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(16), .skills-lists.in-view .basic-skills li:nth-of-type(16) {
+  transition-delay: 1150ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(17), .skills-lists.in-view .basic-skills li:nth-of-type(17) {
+  transition-delay: 1210ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(18), .skills-lists.in-view .basic-skills li:nth-of-type(18) {
+  transition-delay: 1270ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(19), .skills-lists.in-view .basic-skills li:nth-of-type(19) {
+  transition-delay: 1330ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(20), .skills-lists.in-view .basic-skills li:nth-of-type(20) {
+  transition-delay: 1390ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(21), .skills-lists.in-view .basic-skills li:nth-of-type(21) {
+  transition-delay: 1450ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(22), .skills-lists.in-view .basic-skills li:nth-of-type(22) {
+  transition-delay: 1510ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(23), .skills-lists.in-view .basic-skills li:nth-of-type(23) {
+  transition-delay: 1570ms;
+}
+.skills-lists.in-view .core-skills li:nth-of-type(24), .skills-lists.in-view .basic-skills li:nth-of-type(24) {
+  transition-delay: 1630ms;
+}
+.skills-lists.in-view .core-skills li, .skills-lists.in-view .basic-skills li {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-#work article .work-details, #work article .image-container {
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-#work article .work-details {
-  transform: translateX(-10em);
-}
 #work article .image-container {
-  transform: translateX(5em);
+  opacity: 0;
+  transform: translateY(1.5em);
+  transition: all 0.5s ease-in-out;
 }
 #work article h3 {
   opacity: 0;
@@ -219,9 +263,9 @@ h2.in-view {
   opacity: 1;
   transform: translateY(0);
 }
-#work article.in-view .work-details, #work article.in-view .image-container {
+#work article.in-view .image-container {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 #contact .watch {
@@ -291,7 +335,6 @@ h5 {
   color: var(--font-dark);
   font-family: var(--font-heading);
   font-weight: 700;
-  font-optical-sizing: auto;
 }
 
 h1 {
@@ -308,7 +351,6 @@ h1 {
 h2 {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-optical-sizing: auto;
   font-size: clamp(3rem, 10vw, 5rem);
   margin: 1em 0 0.5em 0;
   line-height: 1;
@@ -459,7 +501,6 @@ nav {
 nav .logo {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-optical-sizing: auto;
   font-size: 1.8rem;
   margin-right: auto;
 }
@@ -728,6 +769,7 @@ section.skills .skills-lists {
 section.skills .core-skills,
 section.skills .basic-skills {
   display: flex;
+  flex-direction: column;
   width: 50%;
   padding-right: 2em;
 }
@@ -738,29 +780,42 @@ section.skills .basic-skills {
     width: 100%;
   }
 }
-@media all and (max-width: 450px) {
-  section.skills .core-skills,
-  section.skills .basic-skills {
-    flex-direction: column;
-  }
+section.skills h3 {
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  margin: 0 0 1em 0;
 }
 section.skills ul {
-  margin: 0 0 0 15%;
+  margin: 0;
+  padding: 0;
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.8em;
 }
 section.skills ul li {
-  margin: 1em 0;
-  position: relative;
+  margin: 0;
+  display: flex;
 }
-section.skills ul li::before {
-  content: "";
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
+section.skills ul p {
+  margin: 0;
+  padding: 1.1em 0.8em;
+  width: 100%;
+  background-color: #fff;
+  color: var(--font-dark);
+  border-radius: 8px;
+  box-shadow: 0 0 6px 6px rgba(232, 253, 251, 0.5);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+  transition: all 150ms ease-in-out;
+}
+section.skills ul li:hover p {
   background-color: var(--green);
-  position: absolute;
-  left: -1.5em;
-  top: calc(50% - 2px);
+  color: #fff;
+  transform: translateY(-3px);
 }
 
 section.work {
