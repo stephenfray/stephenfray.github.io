@@ -6,36 +6,33 @@
 /// Header
 ///////////////////////////////////////
 header {
-    .logo, ul a {
-        opacity: 0;
-        transform: translateY(0.2em);
-        transition: all .5s ease-in-out;
-    }
-    &.in-view
-    {
-        ul li:nth-of-type(1) a {
-            transition-delay:100ms
-        }
-        ul li:nth-of-type(2) a {
-            transition-delay:200ms
-        }
-        ul li:nth-of-type(3) a {
-            transition-delay:300ms
-        }
-        ul li:nth-of-type(4) a:nth-of-type(1) {
-            transition-delay:400ms
-        }
-        ul li:nth-of-type(4) a:nth-of-type(2) {
-            transition-delay:500ms
-        }
-        .logo, ul a  {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-    }
+	.logo, ul a {
+		opacity: 0;
+		transform: translateY(0.2em);
+		transition: all .5s ease-in-out;
+	}
+	&.in-view {
+		ul li:nth-of-type(1) a {
+			transition-delay:100ms
+		}
+		ul li:nth-of-type(2) a {
+			transition-delay:200ms
+		}
+		ul li:nth-of-type(3) a {
+			transition-delay:300ms
+		}
+		ul li:nth-of-type(4) a:nth-of-type(1) {
+			transition-delay:400ms
+		}
+		ul li:nth-of-type(4) a:nth-of-type(2) {
+			transition-delay:500ms
+		}
+		.logo, ul a  {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 }
-
 
 ///////////////////////////////////////
 ///////////////////////////////////////
@@ -45,41 +42,41 @@ header {
 /// Hero - Image Grid
 ///////////////////////////////////////
 .picture-gallery {
-    > div {
-        opacity: 0;
-        filter: blur(2px);
-        transform: scale(0.9);
-        transition: all .5s ease-in-out; 
-    }
-    &.in-view > div {
-        &:nth-of-type(1) {
-            transition-delay:0ms
-        }
-        &:nth-of-type(2) {
-            transition-delay:50ms
-        }
-        &:nth-of-type(3) {
-            transition-delay:100ms
-        }
-        &:nth-of-type(4) {
-            transition-delay:150ms
-        }
-        &:nth-of-type(5) {
-            transition-delay:200ms
-        }
-        &:nth-of-type(6) {
-            transition-delay:250ms
-        }
-        &:nth-of-type(7) {
-            transition-delay:300ms
-        }
-        &:nth-of-type(8) {
-            transition-delay:350ms
-        }
-        opacity: 1;
-        filter: blur(0);
-        transform: scale(1);
-    }
+	> div {
+		opacity: 0;
+		filter: blur(2px);
+		transform: scale(0.9);
+		transition: all .5s ease-in-out;
+	}
+	&.in-view > div {
+		&:nth-of-type(1) {
+			transition-delay:0ms
+		}
+		&:nth-of-type(2) {
+			transition-delay:50ms
+		}
+		&:nth-of-type(3) {
+			transition-delay:100ms
+		}
+		&:nth-of-type(4) {
+			transition-delay:150ms
+		}
+		&:nth-of-type(5) {
+			transition-delay:200ms
+		}
+		&:nth-of-type(6) {
+			transition-delay:250ms
+		}
+		&:nth-of-type(7) {
+			transition-delay:300ms
+		}
+		&:nth-of-type(8) {
+			transition-delay:350ms
+		}
+		opacity: 1;
+		filter: blur(0);
+		transform: scale(1);
+	}
 }
 
 ///////////////////////////////////////
@@ -90,31 +87,30 @@ header {
 /// Hero - Intro
 ///////////////////////////////////////
 .opening-statement {
-    h1, p, a {
-        opacity: 0;
-        transform: translateY(1em);
-        transition: all .5s ease-in-out;
-    }
-    h1 {
-        transform: translateY(0.3em);
-    }
-    &.in-view {
-        p {
-            transition-delay:100ms
-        }
-        a:nth-of-type(1) {
-            transition-delay:200ms
-        }
-        a:nth-of-type(2) {
-            transition-delay:300ms
-        }
-        h1, p, a {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+	h1, p, a {
+		opacity: 0;
+		transform: translateY(1em);
+		transition: all .5s ease-in-out;
+	}
+	h1 {
+		transform: translateY(0.3em);
+	}
+	&.in-view {
+		p {
+			transition-delay:100ms
+		}
+		a:nth-of-type(1) {
+			transition-delay:200ms
+		}
+		a:nth-of-type(2) {
+			transition-delay:300ms
+		}
+		h1, p, a {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 }
-
 
 ///////////////////////////////////////
 ///////////////////////////////////////
@@ -124,13 +120,13 @@ header {
 /// H2 - Section headings
 ///////////////////////////////////////
 h2 {
-    opacity: 0;
-    transform: translateY(.5em);
-    transition: all .5s ease-in-out; 
-    &.in-view {
-        // opacity: 1; - already set elsewhere
-        transform: translateY(0);
-    }
+	opacity: 0;
+	transform: translateY(.5em);
+	transition: all .5s ease-in-out;
+	&.in-view {
+		// opacity: 1; - already set elsewhere
+		transform: translateY(0);
+	}
 }
 
 ///////////////////////////////////////
@@ -141,39 +137,39 @@ h2 {
 /// Certifications Section
 ///////////////////////////////////////
 .certifications-list {
-    .certification-card {
-        opacity: 0;
-        transform: translateY(1.5em);
-        transition: all .5s ease-in-out;
-    }
-    &.in-view {
-        h2 {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .certification-card {
-            &:nth-of-type(1) {
-                transition-delay:150ms
-            }
-            &:nth-of-type(2) {
-                transition-delay:300ms
-            }
-            &:nth-of-type(3) {
-                transition-delay:450ms
-            }
-            &:nth-of-type(4) {
-                transition-delay:600ms
-            }
-            &:nth-of-type(5) {
-                transition-delay:750ms
-            }
-            &:nth-of-type(6) {
-                transition-delay:900ms
-            }
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+	.certification-card {
+		opacity: 0;
+		transform: translateY(1.5em);
+		transition: all .5s ease-in-out;
+	}
+	&.in-view {
+		h2 {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		.certification-card {
+			&:nth-of-type(1) {
+				transition-delay:150ms
+			}
+			&:nth-of-type(2) {
+				transition-delay:300ms
+			}
+			&:nth-of-type(3) {
+				transition-delay:450ms
+			}
+			&:nth-of-type(4) {
+				transition-delay:600ms
+			}
+			&:nth-of-type(5) {
+				transition-delay:750ms
+			}
+			&:nth-of-type(6) {
+				transition-delay:900ms
+			}
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 }
 
 ///////////////////////////////////////
@@ -184,40 +180,40 @@ h2 {
 /// Skills Section
 ////////////////////////////////////
 .skills-lists {
-    .core-skills, .basic-skills {
-        h3 {
-            opacity: 0;
-            transform: translateY(1em);
-            transition: all .5s ease-in-out;
-        }
-        li {
-            opacity: 0;
-            transform: translateY(1em);
-            transition: all .5s ease-in-out;
-        }
-    }
-    &.in-view {
-        h2 {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .core-skills, .basic-skills {
-            h3 {
-                opacity: 1;
-                transform: translateY(0);
-                transition-delay: 150ms;
-            }
-            li {
-                @for $i from 1 through 24 {
-                    &:nth-of-type(#{$i}) {
-                        transition-delay: #{250 + ($i - 1) * 60}ms;
-                    }
-                }
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    }
+	.core-skills, .basic-skills {
+		h3 {
+			opacity: 0;
+			transform: translateY(1em);
+			transition: all .5s ease-in-out;
+		}
+		li {
+			opacity: 0;
+			transform: translateY(1em);
+			transition: all .5s ease-in-out;
+		}
+	}
+	&.in-view {
+		h2 {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		.core-skills, .basic-skills {
+			h3 {
+				opacity: 1;
+				transform: translateY(0);
+				transition-delay: 150ms;
+			}
+			li {
+				@for $i from 1 through 24 {
+					&:nth-of-type(#{$i}) {
+						transition-delay: #{250 + ($i - 1) * 60}ms;
+					}
+				}
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	}
 }
 
 ///////////////////////////////////////
@@ -228,45 +224,44 @@ h2 {
 /// Work Items
 ///////////////////////////////////////
 #work article {
-    .image-container {
-        opacity: 0;
-        transform: translateY(1.5em);
-        transition: all .5s ease-in-out;
-    }
-    h3 {
-        opacity: 0;
-        transform: translateY(0.4em);
-        transition: all .5s ease-in-out;
-    }
-    p, .skills-used, .buttons {
-        opacity: 0;
-        transform: translateY(1em); 
-        transition: all .5s ease-in-out; 
-    }
+	.image-container {
+		opacity: 0;
+		transform: translateY(1.5em);
+		transition: all .5s ease-in-out;
+	}
+	h3 {
+		opacity: 0;
+		transform: translateY(0.4em);
+		transition: all .5s ease-in-out;
+	}
+	p, .skills-used, .buttons {
+		opacity: 0;
+		transform: translateY(1em);
+		transition: all .5s ease-in-out;
+	}
 
-    &.in-view {
-        h3 {
-            transition-delay:300ms;
-        }
-        p {
-            transition-delay:400ms;
-        }
-        .skills-used {
-            transition-delay:500ms;
-        }
-        .buttons {
-            transition-delay:600ms;
-        }
-        h3, p, .skills-used, .buttons {
-            opacity: 1;
-            transform: translateY(0); 
-        }
-        .image-container {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-    }
+	&.in-view {
+		h3 {
+			transition-delay:300ms;
+		}
+		p {
+			transition-delay:400ms;
+		}
+		.skills-used {
+			transition-delay:500ms;
+		}
+		.buttons {
+			transition-delay:600ms;
+		}
+		h3, p, .skills-used, .buttons {
+			opacity: 1;
+			transform: translateY(0);
+		}
+		.image-container {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 }
 
 ///////////////////////////////////////
@@ -277,31 +272,31 @@ h2 {
 /// Contact
 ///////////////////////////////////////
 #contact .watch {
-    h2 {
-        transform: translateY(0.3em);
-        transition: transform .5s ease-in-out;
-    }
-    p, .links {
-        opacity: 0;
-        transform: translateY(1em);
-        transition: all .5s ease-in-out;
-    }
-    &.in-view {
-        h2 {
-            transform: translateY(0);
-        }
-        p:nth-of-type(1) {
-            transition-delay: 150ms;
-        }
-        p:nth-of-type(2) {
-            transition-delay: 300ms;
-        }
-        .links {
-            transition-delay: 450ms;
-        }
-        p, .links {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
+	h2 {
+		transform: translateY(0.3em);
+		transition: transform .5s ease-in-out;
+	}
+	p, .links {
+		opacity: 0;
+		transform: translateY(1em);
+		transition: all .5s ease-in-out;
+	}
+	&.in-view {
+		h2 {
+			transform: translateY(0);
+		}
+		p:nth-of-type(1) {
+			transition-delay: 150ms;
+		}
+		p:nth-of-type(2) {
+			transition-delay: 300ms;
+		}
+		.links {
+			transition-delay: 450ms;
+		}
+		p, .links {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
 }
