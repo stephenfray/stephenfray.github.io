@@ -65,6 +65,12 @@ for (var button of readMoreButtons) {
 
         if (currentButton.classList.contains('active')) {
             // CLOSE IT
+            // Re-measure in case the content (or viewport) has changed size since it was opened,
+            // then force a reflow so the browser has a real starting height to animate down from.
+            content.style.maxHeight = `${content.scrollHeight}px`;
+            content.offsetHeight;
+            content.style.maxHeight = '0px';
+
             // Actual show toggle
             currentButton.textContent = 'Read More';
             currentButton.classList.remove('active');
@@ -80,11 +86,23 @@ for (var button of readMoreButtons) {
             currentButton.textContent = 'Read Less';
             currentButton.classList.add('active');
             content.classList.add('open');
+            // Animate to the content's real height rather than an arbitrary large value,
+            // so the transition duration reflects an actual slide instead of jumping open.
+            content.style.maxHeight = `${content.scrollHeight}px`;
         }
 
 
     }
 }
+
+// Keep open panels from clipping if the content reflows to a different
+// height (e.g. viewport resize/rotation changes text wrapping).
+window.addEventListener('resize', () => {
+    document.querySelectorAll('.read-more-content.open').forEach(function(content) {
+        content.style.maxHeight = `${content.scrollHeight}px`;
+    });
+});
+
 /// Animation triggers //////////////////////////////
 
 ////////////////////////////////////////////////////////////////

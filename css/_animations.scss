@@ -238,17 +238,17 @@ h2 {
         transform: translateY(0.4em);
         transition: all .5s ease-in-out;
     }
-    p, .skills-used, .buttons {
-        opacity: 0;
-        transform: translateY(1em); 
-        transition: all .5s ease-in-out; 
-    }
+    // .work-details p, .skills-used, .buttons {
+    //     opacity: 0;
+    //     transform: translateY(1em);
+    //     transition: all .5s ease-in-out;
+    // }
 
     &.in-view {
         h3 {
             transition-delay:300ms;
         }
-        p {
+        .work-details p {
             transition-delay:400ms;
         }
         .skills-used {
@@ -257,9 +257,9 @@ h2 {
         .buttons {
             transition-delay:600ms;
         }
-        h3, p, .skills-used, .buttons {
+        h3, .work-details p, .skills-used, .buttons {
             opacity: 1;
-            transform: translateY(0); 
+            transform: translateY(0);
         }
         .image-container {
             opacity: 1;
